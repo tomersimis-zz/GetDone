@@ -2,22 +2,22 @@
 
   <div class="col-md-6 col-md-offset-3">
 
-    <form>
+    <form ng-submit="createTask()">
       <div id="task-form" class="panel panel-default">
         <div class="panel-body no-padding">
-          <textarea class="form-control input-lg no-border" rows="2" placeholder="What do you have to do?"></textarea>
+          <textarea ng-model="description" class="form-control input-lg no-border" rows="2" placeholder="What do you have to do?"></textarea>
         </div>
         <div class="panel-footer">
-          <button type="button" class="btn btn-info pull-right">Create</button>
+          <button type="submit" class="btn btn-info pull-right">Create</button>
           <br style="clear: both" />
         </div>
       </div>
     </form>
 
     <ul class="list-group">
-      <li class="list-group-item">
-        <span class="badge">7 minutes ago</span>
-        Cras justo odio ad asd asd asdsad sad msad sad sa dsa ds ad asd saf sa fsa d as das das das d sa 
+      <li ng-repeat="task in tasks" class="list-group-item">
+        <span class="badge"> {{ task.date }}</span>
+        {{ task.description }}
       </li>
     </ul>
         

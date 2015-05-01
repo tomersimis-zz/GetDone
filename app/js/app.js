@@ -1,12 +1,14 @@
 var getDoneApp = angular.module('getDoneApp',[
-	'ngRoute'
-])
+	'ngRoute',
+	'getDoneControllers'
+]);
 
 getDoneApp.config(['$routeProvider',
 	function($routeProvider){
 		$routeProvider.
 			when('/tasks', {
-				templateUrl: 'partials/tasks-main.html'
+				templateUrl: 'partials/tasks-main.html',
+				controller: 'TaskList'
 			}).
 			when('/about', {
 				templateUrl: 'partials/about.html'
