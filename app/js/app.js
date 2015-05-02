@@ -14,6 +14,9 @@ getDoneApp.config(['$routeProvider',
 			when('/about', {
 				templateUrl: 'partials/about.html'
 			}).
+			when('/', {
+				templateUrl: 'partials/home.html'
+			}).
 			otherwise({
 				redirectTo: '/tasks'
 			})
