@@ -20,3 +20,7 @@ body {
 	height: 90px;
 	border-radius: 0px;
 }
+
+.task-done{
+	text-decoration: line-through !important;
+}

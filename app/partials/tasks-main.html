@@ -15,10 +15,10 @@
     </form>
 
     <ul class="list-group">
-      <li ng-repeat="task in tasks" class="list-group-item">
+      <a ng-click="setDone(task.id)" ng-class="{'task-done': task.done }" ng-repeat="task in tasks" class="list-group-item">
         <span class="badge"> {{ task.date | timeAgo }}</span>
         {{ task.description }}
-      </li>
+      </a>
     </ul>
         
   </div>
