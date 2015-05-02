@@ -16,7 +16,7 @@
 
     <ul class="list-group">
       <li ng-repeat="task in tasks" class="list-group-item">
-        <span class="badge"> {{ task.date }}</span>
+        <span class="badge"> {{ task.date | timeAgo }}</span>
         {{ task.description }}
       </li>
     </ul>

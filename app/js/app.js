@@ -1,6 +1,7 @@
 var getDoneApp = angular.module('getDoneApp',[
 	'ngRoute',
-	'getDoneControllers'
+	'getDoneControllers',
+	'yaru22.angular-timeago'
 ]);
 
 getDoneApp.config(['$routeProvider',
